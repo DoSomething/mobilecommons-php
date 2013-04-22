@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/DoSomething/mobilecommons-php.png)](https://travis-ci.org/DoSomething/mobilecommons-php.png)
+[![Build Status](https://travis-ci.org/DoSomething/mobilecommons-php.png?branch=master)](https://travis-ci.org/DoSomething/mobilecommons-php)
 
 Mobile Commons API Client for PHP by DoSomething.org
 =========
