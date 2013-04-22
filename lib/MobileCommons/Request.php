@@ -135,28 +135,7 @@ class Request
         }
 
         //@todo write test to make sure this returns an array
-        return $this->_convertXML($xmlObject);
-    }
-
-    /**
-     * Helper function to convert SimpleXML object
-     *
-     * @param object $xmlObject
-     * @return  array
-     */
-    private function _convertXML($xmlObject)
-    {
-        $arr = array();
-        foreach ($xmlObject->children() as $r) {
-            $t = array();
-            if(count($r->children()) == 0) {
-                $arr[$r->getName()] = strval($r);
-            }
-            else {
-                $arr[$r->getName()][] = $this->_convertXML($r);
-            }
-        }
-        return $arr;
+        return $xmlObject;
     }
 
 }
