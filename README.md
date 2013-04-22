@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/DoSomething/mobilecommons-php.png)](https://travis-ci.org/DoSomething/mobilecommons-php.png)
 
-Mobile Commons API Client for PHP
+Mobile Commons API Client for PHP by DoSomething.org
 =========
 
 A PHP wrapper for the Mobile Commons REST and mData API.
