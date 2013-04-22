@@ -1,9 +1,9 @@
 {
-    "name": "dosomething/mobilecommons-php",
+    "name": "DoSomething/mobilecommons-php",
     "type": "library",
     "description": "A PHP wrapper for the Mobile Commons API",
     "keywords": ["mobilecommons", "sms"],
-    "homepage": "https://github.com/dosomething/mobilecommons-php",
+    "homepage": "https://github.com/DoSomething/mobilecommons-php",
     "license" : "MIT",
     "authors": [
     {

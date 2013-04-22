@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/desmondmorris/mobilecommons-php.png)](https://travis-ci.org/desmondmorris/mobilecommons-php.png)
+[![Build Status](https://travis-ci.org/DoSomething/mobilecommons-php.png)](https://travis-ci.org/DoSomething/mobilecommons-php.png)
 
 Mobile Commons API Client for PHP
 =========
