@@ -8,7 +8,7 @@
     "authors": [
     {
       "name": "DoSomething and contributors",
-      "homepage": "https://github.com/dosomething/mobilecommons-php/contributors"
+      "homepage": "http://www.dosomething.org"
     }
   ],
   "autoload": {
