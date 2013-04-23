@@ -1,5 +1,5 @@
 {
-    "name": "DoSomething/mobilecommons-php",
+    "name": "dosomething/mobilecommons-php",
     "type": "library",
     "description": "A PHP wrapper for the Mobile Commons API",
     "keywords": ["mobilecommons", "sms"],
