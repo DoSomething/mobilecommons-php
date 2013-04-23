@@ -16,12 +16,10 @@ Requirements
 Installation
 -
 
-Composer:
+Via Composer:
 
-Basic:
+Available on Packagist as the dosomething/mobilecommons-php package
 
-Usage
--
 
 License
 -
