@@ -11,14 +11,16 @@ class MobileCommonsTest extends PHPUnit_Framework_TestCase
     /**
      * @expectedException Exception
      */
-    public function testMissingConfigThrowsException() {
+    public function testMissingConfigThrowsException()
+    {
         $MobileCommons = new MobileCommons();
     }
 
     /**
      * @expectedException Exception
      */
-    public function testMissingUsernameThrowsException() {
+    public function testMissingUsernameThrowsException()
+    {
         $config = self::$authentication_config;
         unset($config['username']);
         $MobileCommons = new MobileCommons($config);
@@ -27,13 +29,15 @@ class MobileCommonsTest extends PHPUnit_Framework_TestCase
     /**
      * @expectedException Exception
      */
-    public function testMissingPasswordThrowsException() {
+    public function testMissingPasswordThrowsException()
+    {
         $config = self::$authentication_config;
         unset($config['password']);
         $MobileCommons = new MobileCommons($config);
     }
 
-    public function testValidAuthenticationString() {
+    public function testValidAuthenticationString()
+    {
         $MobileCommons = new MobileCommons(self::$authentication_config);
 
         $this->assertRegExp(
