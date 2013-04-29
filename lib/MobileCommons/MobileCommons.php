@@ -13,13 +13,9 @@ class MobileCommons
      * @param array $config Configuration variables
      * @return void
      */
-    public function __construct($config, Request $requestObject = null)
+    public function __construct($config, Request $requestInstance = null)
     {
-        if ($requestObject == null) {
-          $this->Request = new Request($config);
-        } else {
-          $this->Request = $requestObject;
-        }
+        $this->Request = is_null( $requestInstance ) ? new Request($config) : $requestInstance;
     }
 
     /**
