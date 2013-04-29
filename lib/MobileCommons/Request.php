@@ -118,23 +118,12 @@ class Request
             throw new Exception("Response: Bad response - HTTP Code:". $curl_info['http_code']);
         }
 
-        return $this->_response($response);
-    }
+        $xmlObject = simplexml_load_string($response);
 
-    /**
-     * Response
-     *
-     * @param string $xmlResponse
-     * @return array
-     */
-    private function _response($xmlResponse)
-    {
-        //@todo write test for this
-        if ( !($xmlObject = simplexml_load_string($xmlResponse)) ) {
-          throw new Exception("Response: Response string is not XML");
+        if ($xmlObject === false) {
+            throw new Exception("Response: Response was not valid XML");
         }
 
-        //@todo write test to make sure this returns an array
         return $xmlObject;
     }
 
