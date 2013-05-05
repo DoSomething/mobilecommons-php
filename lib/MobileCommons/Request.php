@@ -112,7 +112,6 @@ class Request
         }
         curl_close($curl);
 
-
         //@todo test for any non 200 response
         if ($curl_info['http_code'] != 200) {
             throw new Exception("Response: Bad response - HTTP Code:". $curl_info['http_code']);
