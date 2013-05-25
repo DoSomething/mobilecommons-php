@@ -18,11 +18,11 @@ class MobileCommonsTest extends PHPUnit_Framework_TestCase
 
         $response = simplexml_load_string( '<?xml version="1.0" encoding="UTF-8"?>
             <response success="true"></response>');
-       
+
         $stub->expects($this->any())
             ->method('call')
             ->will($this->returnValue($response));
-        $this->MobileCommons = new MobileCommons($stub);
+        $this->MobileCommons = new MobileCommons(self::$authentication_config, $stub);
     }
 
     /**
@@ -40,7 +40,7 @@ class MobileCommonsTest extends PHPUnit_Framework_TestCase
     {
         $config = self::$authentication_config;
         unset($config['username']);
-        $MobileCommons = new MobileCommons(null, $config);
+        $MobileCommons = new MobileCommons($config);
     }
 
     /**
@@ -50,12 +50,12 @@ class MobileCommonsTest extends PHPUnit_Framework_TestCase
     {
         $config = self::$authentication_config;
         unset($config['password']);
-        $MobileCommons = new MobileCommons(null, $config);
+        $MobileCommons = new MobileCommons($config);
     }
 
     public function testValidAuthenticationString()
     {
-        $MobileCommons = new MobileCommons(null, self::$authentication_config);
+        $MobileCommons = new MobileCommons(self::$authentication_config);
 
         $this->assertRegExp(
             '/[A-Za-z0-9]+\:[A-Za-z0-9]+/',
