@@ -150,6 +150,30 @@ class MobileCommons
     }
 
     /**
+     * Profile Opt-In
+     * @see https://secure.mcommons.com/help/forms#form
+     *
+     * @param array $args
+     * @return string
+     */
+    public function opt_in($args = array()) {
+        return $this->Request->webform('join', $args);
+    }
+
+    /**
+     * Profile Opt-Out
+     * @see https://secure.mcommons.com/help/forms#optout
+     *
+     * @param array $args
+     * @return string
+     */
+    public function opt_out($args = array()) {
+        $args['company_key'] = $this->Request->getCompanyKey();
+        return $this->Request->webform('opt_out', $args);
+    }
+
+
+    /**
      * Profiles: Get
      * @see http://www.mobilecommons.com/mobile-commons-api/rest/#ProfileSummary
      *

@@ -8,18 +8,28 @@
 
 class Request
 {
-	/**
+    /**
      * Base URL
      */
     const API_URL = 'https://secure.mcommons.com/api/';
 
-	/**
+    /**
+     * Webform URL for opt-in and opt-outs
+     */
+    const WEBFORM_URL = 'https://secure.mcommons.com/profiles/';
+
+    /**
      * Authentication String
      */
     private $_authentication_string;
 
+    /**
+     * Company Key
+     */
+    private $_company_key;
 
-	/**
+
+    /**
      * Constructor
      *
      * @param array $base_url
@@ -28,7 +38,7 @@ class Request
     public function __construct($config)
     {
 
-    	//@todo - write test
+        //@todo - write test
         if (!is_array($config)) {
             throw new Exception("Configuration:  Missing configuration.");
         }
@@ -44,6 +54,10 @@ class Request
         }
 
         $this->_setAuthenticationString($config['username'], $config['password']);
+
+        if (isset($config['company_key'])) {
+            $this->_company_key = $config['company_key'];
+        }
 
     }
 
@@ -68,6 +82,16 @@ class Request
     {
         return $this->_authentication_string;
     }
+
+    /**
+     * Company Key Getter
+     *
+     * @return string
+     */
+    public function getCompanyKey() {
+        return $this->_company_key;
+    }
+
 
      /**
      * Make an api request
@@ -124,6 +148,31 @@ class Request
         }
 
         return $xmlObject;
+    }
+
+    /**
+     * Make a request to the Web Form API.
+     *
+     * @param string $action
+     * @param array $params
+     * @return string
+     */
+    public function webform($action, $params) {
+        $url = self::WEBFORM_URL . $action;
+
+        $header = sprintf("Authorization: Basic %s\r\n", base64_encode($this->getAuthenticationString()));
+        $header .= "Content-type: application/x-www-form-urlencoded\r\n";
+
+        $opts = array(
+            'http' => array(
+                'method'  => 'POST',
+                'header'  => $header,
+                'content' => http_build_query($params),
+            )
+        );
+
+        $context = stream_context_create($opts);
+        return file_get_contents($url, FALSE, $context);
     }
 
 }
