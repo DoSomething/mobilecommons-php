@@ -21,6 +21,22 @@ Via Composer:
 Available on Packagist as the dosomething/mobilecommons-php package
 
 
+Usage
+-
+
+````
+$config = array(
+  'username' => USERNAME, // Mobile commons username
+  'password' => PW // Mobilecommons password
+);
+
+$MobileCommons = new MobileCommons($config);
+
+$campaigns = $MobileCommons->campaigns();
+
+print_r($campaigns); // Print list of campaigns
+````
+
 License
 -
 This library is released under the [MIT License](http://opensource.org/licenses/MIT)
