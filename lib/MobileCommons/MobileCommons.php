@@ -154,10 +154,36 @@ class MobileCommons
      * @see https://secure.mcommons.com/help/forms#form
      *
      * @param array $args
+     *   An associative array of values to send to the API query string, 
+     *   keyed by the parameter name each value is associated with.
+     *
+     *   If looking to make use of the `friends[]` parameter,
+     *   @see opt_in_with_friends().
+     *
      * @return string
      */
     public function opt_in($args = array()) {
         return $this->Request->webform('join', $args);
+    }
+
+    /**
+     * Profile Opt-In with Friends
+     * @see https://secure.mcommons.com/help/forms#parameters
+     *
+     * @param array $args
+     *   An associative array with keys:
+     *
+     *   - args: An associative array of values to send to the API query string
+     *     keyed by the parameter name each value is associated with. 
+     *     Should exclude any values to send to the `friends[]` parameter.
+     *
+     *   - friends: An array of friends mobile numbers, each of which to send 
+     *     as a `friends[]` parameter.
+     *
+     * @return string
+     */
+    public function opt_in_with_friends($args) {
+        return $this->Request->webform('join', $args['args'], $args['friends']);
     }
 
     /**

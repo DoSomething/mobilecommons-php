@@ -155,24 +155,35 @@ class Request
      *
      * @param string $action
      * @param array $params
+     * @param array $friends
      * @return string
      */
-    public function webform($action, $params) {
+    public function webform($action, $params, $friends = array()) {
         $url = self::WEBFORM_URL . $action;
-
+ 
         $header = sprintf("Authorization: Basic %s\r\n", base64_encode($this->getAuthenticationString()));
         $header .= "Content-type: application/x-www-form-urlencoded\r\n";
+        $params = http_build_query($params);
+
+        // If we have any friends present:
+        if (!empty($friends)) {
+            // Loop through them.
+            foreach ($friends as $friend) {
+                // Add each one to the query string.
+                $params .= '&friends[]=' . $friend;                
+            }
+        }
 
         $opts = array(
             'http' => array(
                 'method'  => 'POST',
                 'header'  => $header,
-                'content' => http_build_query($params),
+                'content' => $params,
             )
         );
-
+ 
         $context = stream_context_create($opts);
         return file_get_contents($url, FALSE, $context);
     }
-
+ 
 }
