@@ -184,7 +184,7 @@ class Request
         );
  
         $context = stream_context_create($opts);
-        return file_get_contents($url, FALSE, $context);
+        return file_get_contents($url, false, $context);
     }
  
 }
