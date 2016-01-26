@@ -131,8 +131,9 @@ class Request
         $curl_info = curl_getinfo($curl);
 
         //@todo test for curl error
-        if ($response === FALSE) {
-            throw new Exception(curl_error($curl), curl_errno($curl));
+        if ($errno = curl_errno($curl)) {
+          $error_message = $errno . ': ' . curl_strerror($errno);
+          throw new Exception($error_message);
         }
         curl_close($curl);
 
