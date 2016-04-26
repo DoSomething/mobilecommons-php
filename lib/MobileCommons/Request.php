@@ -133,7 +133,7 @@ class Request
         //@todo test for curl error
         if ($errno = curl_errno($curl)) {
           $error_message = $errno . ': ' . curl_strerror($errno);
-          throw new Exception($error_message);
+          throw new Exception($error_message, $errno);
         }
         curl_close($curl);
 
