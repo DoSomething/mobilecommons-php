@@ -118,6 +118,7 @@ class Request
           CURLOPT_RETURNTRANSFER => 1,
           CURLOPT_URL => $requestUrl,
           CURLOPT_TIMEOUT => 30,
+          CURLOPT_CONNECTTIMEOUT => 30,
           CURLOPT_HTTPHEADER => array('Accept: application/xml'),
         );
 
