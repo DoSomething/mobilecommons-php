@@ -20,7 +20,7 @@ class MobileCommons
 
     /**
      * Calls: List
-     * @see http://www.mobilecommons.com/mobile-commons-api/rest/#ListCalls
+     * @see https://mobilecommons.zendesk.com/hc/en-us/articles/202052534-REST-API/#ListCalls
      *
      * @param array $args
      * @return array
@@ -31,7 +31,7 @@ class MobileCommons
 
     /**
      * Campaigns: List
-     * @see http://www.mobilecommons.com/mobile-commons-api/rest/#ListCampaigns
+     * @see https://mobilecommons.zendesk.com/hc/en-us/articles/202052534-REST-API/#ListCampaigns
      *
      * @param array $args
      * @return array
@@ -42,7 +42,7 @@ class MobileCommons
 
     /**
      * Campaigns: Broadcast
-     * @see http://www.mobilecommons.com/mobile-commons-api/rest/#SendBroadcasttoCampaignSubscribers
+     * @see https://mobilecommons.zendesk.com/hc/en-us/articles/202052534-REST-API/#SendBroadcasttoCampaignSubscribers
      *
      * @param array $args
      * @return array
@@ -53,7 +53,7 @@ class MobileCommons
 
     /**
      * Campaigns: Subscribers
-     * @see http://www.mobilecommons.com/mobile-commons-api/rest/#ListCampaignSubscribers
+     * @see https://mobilecommons.zendesk.com/hc/en-us/articles/202052534-REST-API/#ListCampaignSubscribers
      *
      * @param array $args
      * @return array
@@ -64,7 +64,7 @@ class MobileCommons
 
     /**
      * Clicks: List
-     * @see http://www.mobilecommons.com/mobile-commons-api/rest/#Clicks
+     * @see https://mobilecommons.zendesk.com/hc/en-us/articles/202052534-REST-API/#Clicks
      *
      * @param array $args
      * @return array
@@ -75,7 +75,7 @@ class MobileCommons
 
     /**
      * Donations: Get
-     * @see http://www.mobilecommons.com/mobile-commons-api/rest/#DonationSummary
+     * @see https://mobilecommons.zendesk.com/hc/en-us/articles/202052534-REST-API/#DonationSummary
      *
      * @param array $args
      * @return array
@@ -86,7 +86,7 @@ class MobileCommons
 
     /**
      * Groups: Create
-     * @see http://www.mobilecommons.com/mobile-commons-api/rest/#CreateGroup
+     * @see https://mobilecommons.zendesk.com/hc/en-us/articles/202052534-REST-API/#CreateGroup
      *
      * @param array $args
      * @return array
@@ -97,7 +97,7 @@ class MobileCommons
 
     /**
      * Groups: List
-     * @see http://www.mobilecommons.com/mobile-commons-api/rest/#ListGroups
+     * @see https://mobilecommons.zendesk.com/hc/en-us/articles/202052534-REST-API/#ListGroups
      *
      * @return array
      */
@@ -107,7 +107,7 @@ class MobileCommons
 
     /**
      * Groups: Members
-     * @see http://www.mobilecommons.com/mobile-commons-api/rest/#ListGroupMembers
+     * @see https://mobilecommons.zendesk.com/hc/en-us/articles/202052534-REST-API/#ListGroupMembers
      *
      * @param array $args
      * @return array
@@ -118,7 +118,7 @@ class MobileCommons
 
     /**
      * Groups: Create Member
-     * @see http://www.mobilecommons.com/mobile-commons-api/rest/#AddGroupMember
+     * @see https://mobilecommons.zendesk.com/hc/en-us/articles/202052534-REST-API/#AddGroupMember
      *
      * @param array $args
      * @return array
@@ -129,7 +129,7 @@ class MobileCommons
 
     /**
      * Groups: Delete Member
-     * @see http://www.mobilecommons.com/mobile-commons-api/rest/#RemoveGroupMember
+     * @see https://mobilecommons.zendesk.com/hc/en-us/articles/202052534-REST-API/#RemoveGroupMember
      *
      * @param array $args
      * @return array
@@ -140,7 +140,7 @@ class MobileCommons
 
     /**
      * mConnect: Count
-     * @see http://www.mobilecommons.com/mobile-commons-api/rest/#CallCount
+     * @see https://mobilecommons.zendesk.com/hc/en-us/articles/202052534-REST-API/#CallCount
      *
      * @param array $args
      * @return array
@@ -201,7 +201,7 @@ class MobileCommons
 
     /**
      * Profiles: Get
-     * @see http://www.mobilecommons.com/mobile-commons-api/rest/#ProfileSummary
+     * @see https://mobilecommons.zendesk.com/hc/en-us/articles/202052534-REST-API/#ProfileSummary
      *
      * @param array $args
      * @return array
@@ -212,7 +212,7 @@ class MobileCommons
 
     /**
      * Profiles: List
-     * @see http://www.mobilecommons.com/mobile-commons-api/rest/#ListAllProfiles
+     * @see https://mobilecommons.zendesk.com/hc/en-us/articles/202052534-REST-API/#ListAllProfiles
      *
      * @param array $args
      * @return array
@@ -223,7 +223,7 @@ class MobileCommons
 
     /**
      * Profiles: Update
-     * @see http://www.mobilecommons.com/mobile-commons-api/rest/#ProfileUpdate
+     * @see https://mobilecommons.zendesk.com/hc/en-us/articles/202052534-REST-API/#ProfileUpdate
      *
      * @param array $args
      * @return array
@@ -234,7 +234,7 @@ class MobileCommons
 
     /**
      * Messages: Incoming Messages List
-     * @see http://www.mobilecommons.com/mobile-commons-api/rest/#ListIncomingMessages
+     * @see https://mobilecommons.zendesk.com/hc/en-us/articles/202052534-REST-API/#ListIncomingMessages
      *
      * @param array $args
      * @return array
@@ -245,7 +245,7 @@ class MobileCommons
 
     /**
      * Messages: Send
-     * @see http://www.mobilecommons.com/mobile-commons-api/rest/#SendSMSMessage
+     * @see https://mobilecommons.zendesk.com/hc/en-us/articles/202052534-REST-API/#SendSMSMessage
      *
      * @param array $args
      * @return array
@@ -256,7 +256,7 @@ class MobileCommons
 
     /**
      * Messages: Outgoing Messages List
-     * @see http://www.mobilecommons.com/mobile-commons-api/rest/#ListOutgoingMessages
+     * @see https://mobilecommons.zendesk.com/hc/en-us/articles/202052534-REST-API/#ListOutgoingMessages
      *
      * @param array $args
      * @return array
