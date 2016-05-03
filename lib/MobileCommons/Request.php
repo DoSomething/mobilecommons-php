@@ -132,8 +132,9 @@ class Request
         $curl_info = curl_getinfo($curl);
 
         //@todo test for curl error
-        if ($response === FALSE) {
-            throw new Exception(curl_error($curl), curl_errno($curl));
+        if ($errno = curl_errno($curl)) {
+          $error_message = $errno . ': ' . curl_strerror($errno);
+          throw new Exception($error_message, $errno);
         }
         curl_close($curl);
 
@@ -184,7 +185,7 @@ class Request
         );
  
         $context = stream_context_create($opts);
-        return file_get_contents($url, FALSE, $context);
+        return file_get_contents($url, false, $context);
     }
  
 }
